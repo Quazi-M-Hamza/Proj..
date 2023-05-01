@@ -5,7 +5,9 @@ const hbs = require("hbs")
 const mongoose = require("mongoose")
 const path = require("path")
 const detail = require("./models/detail")
-
+const Slider = require("./models/slider")
+var catMe = require('cat-me')
+console.log(catMe())
 //imported routes h
 const routes = require("./routes/main") 
 //empty "" pe bhi ye routes kaam krega
@@ -32,6 +34,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/web", (err)=>{
   if(err) console.log('err') ;
   else
   console.log("Ok")
+  //schema aur connect ko krne se automatically collection bn jata
   mongoose.set('strictQuery', false) 
   //commenting out cause everytime we run it same object cr8s again dont want tht
   /*detail.create({
@@ -44,9 +47,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/web", (err)=>{
       {label: "Services",
       url: "/Services"},
 
-      {label: "Gallery",
-      url: "/Gallery"},
-
       {label: "about",
     url: "/about"},
 
@@ -57,6 +57,28 @@ mongoose.connect("mongodb://127.0.0.1:27017/web", (err)=>{
 */
 
 //mongoose.con
+
+//2nd model
+
+/*Slider.create([{
+title: "Fully Dyanamic",
+subTitle: "Website build on top of fully fuctional database",
+imageURL:"..."
+
+},
+{
+  title: "Fully Dyanamic",
+  subTitle: "Website build on top of fully fuctional database",
+  imageURL:"..."
+  
+  },{
+    title: "Fully Dyanamic",
+    subTitle: "Website build on top of fully fuctional database",
+    imageURL:"..."
+    
+    }
+])*/
+
 
 });
 

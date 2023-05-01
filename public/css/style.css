@@ -1,3 +1,7 @@
+.slider-image{
+    object-fit: cover ;
+
+}
 body{
 background-color: yellowgreen;
 }
